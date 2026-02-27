@@ -1,0 +1,29 @@
+  <div className='relative mx-auto flex min-h-[58vh] w-full max-w-6xl items-center justify-center overflow-hidden'>
+    <img
+      src='https://www.decorilla.com/online-decorating/wp-content/uploads/2022/03/Dark-modern-house-interior-design-for-a-home-office.jpg'
+      alt='Modern interior'
+      className='h-[68%] w-[48%] object-cover sm:h-[62%] sm:w-[45%]'
+      loading='lazy'
+    />
+
+    <h2 className='pointer-events-none absolute left-[6%] top-[9%] text-[12vw] font-medium leading-[0.95]  sm:text-[8vw] text-[#E4E4E4]'>
+      Explore more
+    </h2>
+    <h2 className='pointer-events-none absolute bottom-[12%] right-[8%] text-[12vw] font-medium leading-[0.95]  sm:text-[8vw] text-[#E4E4E4]'>
+      about us
+    </h2>
+
+    <div
+      aria-hidden='true'
+      className='pointer-events-none absolute inset-0 text-[#fcf9f9]'
+      style={{ clipPath: 'inset(16% 27.5% 1% 27.5%)' }}
+    >
+      <h2 className='absolute left-[6%] top-[9%] text-[12vw] font-medium leading-[0.95] t sm:text-[8vw] '>
+        Explore more
+      </h2>
+      <h2 className='absolute bottom-[12%] right-[8%] text-[12vw] font-medium leading-[0.95] text-white sm:text-[8vw]'>
+        about us
+      </h2>
+    </div>
+
+  </div>
