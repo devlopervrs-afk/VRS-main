@@ -44,10 +44,6 @@ function CaseStudyDetail() {
                 <span className='text-black/55'>Client:</span> <span className='font-medium'>{study.client}</span>
               </p>
               <p>
-                <span className='text-black/55'>Project Value:</span>{' '}
-                <span className='font-semibold text-[#1A3278]'>{study.projectValue}</span>
-              </p>
-              <p>
                 <span className='text-black/55'>Duration:</span> <span className='font-medium'>{study.duration}</span>
               </p>
             </div>

@@ -61,10 +61,6 @@ function CaseStudies() {
 
               <div className='mt-4 grid grid-cols-2 gap-3 border-t border-black/10 pt-4 text-[0.78rem]'>
                 <div>
-                  <p className='text-black/50'>Project Value</p>
-                  <p className='font-semibold text-[#1A3278]'>{item.projectValue}</p>
-                </div>
-                <div>
                   <p className='text-black/50'>Duration</p>
                   <p className='font-semibold text-black'>{item.duration}</p>
                 </div>

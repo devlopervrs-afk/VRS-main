@@ -1,0 +1,20 @@
+# OPTS GitHub account
+Host github-opts
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_opts
+  
+# Devloper AIL Official Account
+Host github-ail-official
+
+  HostName github.com
+  User git
+  IdentityFile ~/.ssh/id_ed25519_ail
+  IdentitiesOnly yes
+
+Host github-vrs
+  HostName github.com
+  User git
+  IdentityFile /Users/prashantsharma/.ssh/id_ed25519_vrs
+  AddKeysToAgent yes
+  UseKeychain yes

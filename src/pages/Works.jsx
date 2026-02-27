@@ -16,64 +16,64 @@ const images = {
 // All 48 projects extracted directly from the VRS PDF (Pages 29-32)
 const allProjects = [
   // --- Hospitality ---
-  { id: 1, title: 'Baron Hotel', sector: 'Hospitality', location: 'Iraq', client: 'Leopisc', scope: 'Doors, Cupboards & Paneling', value: 'DHS 4,340,000.00', image: images.hospitality, featured: true },
-  { id: 2, title: 'Kempinski 5 Star Hotel', sector: 'Hospitality', location: 'Djibouti, East Africa', client: 'Nakheel / Taisei Corp.', scope: 'Doors, Cabinets, Pergolas, wall paneling', value: 'DHS 3,212,755.00', image: images.hospitality, featured: true },
-  { id: 3, title: 'Hawthorn Hotel Apartments', sector: 'Hospitality', location: 'Marina, Dubai', client: 'Drawlink Interiors', scope: 'Doors, Cupboards, Interior, furniture', value: 'DHS 2,850,000.00', image: images.hospitality, featured: true },
+  { id: 1, title: 'Baron Hotel', sector: 'Hospitality', location: 'Iraq', client: 'Leopisc', scope: 'Doors, Cupboards & Paneling',  image: images.hospitality, featured: true },
+  { id: 2, title: 'Kempinski 5 Star Hotel', sector: 'Hospitality', location: 'Djibouti, East Africa', client: 'Nakheel / Taisei Corp.', scope: 'Doors, Cabinets, Pergolas, wall paneling', image: images.hospitality, featured: true },
+  { id: 3, title: 'Hawthorn Hotel Apartments', sector: 'Hospitality', location: 'Marina, Dubai', client: 'Drawlink Interiors', scope: 'Doors, Cupboards, Interior, furniture', image: images.hospitality, featured: true },
   
   // --- Retail ---
-  { id: 4, title: 'Nautica at BurJuman', sector: 'Retail', location: 'Dubai', client: 'Ceejay', scope: 'Full Joinery Works', value: 'DHS 460,000.00', image: images.retail, featured: true },
-  { id: 5, title: 'Nautica at Outlet Mall', sector: 'Retail', location: 'Dubai', client: 'Ceejay', scope: 'Full Joinery Works', value: 'DHS 390,000.00', image: images.retail, featured: false },
-  { id: 6, title: 'Lulu Center', sector: 'Retail', location: 'Dibba, Fujeirah', client: 'Amana Contg', scope: 'Doors', value: 'DHS 310,000.00', image: images.retail, featured: false },
+  { id: 4, title: 'Nautica at BurJuman', sector: 'Retail', location: 'Dubai', client: 'Ceejay', scope: 'Full Joinery Works',  image: images.retail, featured: true },
+  { id: 5, title: 'Nautica at Outlet Mall', sector: 'Retail', location: 'Dubai', client: 'Ceejay', scope: 'Full Joinery Works',  image: images.retail, featured: false },
+  { id: 6, title: 'Lulu Center', sector: 'Retail', location: 'Dibba, Fujeirah', client: 'Amana Contg', scope: 'Doors',  image: images.retail, featured: false },
 
   // --- Commercial ---
-  { id: 7, title: 'Prayer Room at Dubai Mall', sector: 'Commercial', location: 'Dubai', client: 'Emaar', scope: 'Full Joinery Works', value: 'DHS 765,000.00', image: images.commercial, featured: true },
-  { id: 8, title: 'Gypsum Ceiling at Entertainment Area', sector: 'Commercial', location: 'Dubai Mall', client: 'Emaar', scope: 'Full Joinery Works', value: 'DHS 675,000.00', image: images.commercial, featured: true },
-  { id: 9, title: 'G+M+4 Storey Comm. Bldg', sector: 'Commercial', location: 'Dubai', client: 'Ashiyana contg', scope: 'Doors', value: 'DHS 670,000.00', image: images.commercial, featured: false },
-  { id: 10, title: 'G+M+3 Storey Comm. Building', sector: 'Commercial', location: 'Dubai', client: 'Abdulla Zarouni', scope: 'Doors', value: 'DHS 450,000.00', image: images.commercial, featured: false },
-  { id: 11, title: 'B+G+M Comm. Bldg at Deirah', sector: 'Commercial', location: 'Dubai', client: 'Allied contg', scope: 'Doors', value: 'DHS 180,000.00', image: images.commercial, featured: false },
+  { id: 7, title: 'Prayer Room at Dubai Mall', sector: 'Commercial', location: 'Dubai', client: 'Emaar', scope: 'Full Joinery Works',  image: images.commercial, featured: true },
+  { id: 8, title: 'Gypsum Ceiling at Entertainment Area', sector: 'Commercial', location: 'Dubai Mall', client: 'Emaar', scope: 'Full Joinery Works',  image: images.commercial, featured: true },
+  { id: 9, title: 'G+M+4 Storey Comm. Bldg', sector: 'Commercial', location: 'Dubai', client: 'Ashiyana contg', scope: 'Doors',  image: images.commercial, featured: false },
+  { id: 10, title: 'G+M+3 Storey Comm. Building', sector: 'Commercial', location: 'Dubai', client: 'Abdulla Zarouni', scope: 'Doors',  image: images.commercial, featured: false },
+  { id: 11, title: 'B+G+M Comm. Bldg at Deirah', sector: 'Commercial', location: 'Dubai', client: 'Allied contg', scope: 'Doors',  image: images.commercial, featured: false },
 
   // --- Education ---
-  { id: 12, title: 'Iranian School', sector: 'Education', location: 'Sharjah', client: 'KQ Contracting', scope: 'Doors', value: 'DHS 1,226,000.00', image: images.education, featured: false },
+  { id: 12, title: 'Iranian School', sector: 'Education', location: 'Sharjah', client: 'KQ Contracting', scope: 'Doors',  image: images.education, featured: false },
 
   // --- Labor Accommodations ---
-  { id: 13, title: 'G+4 Labour Accom. At Jebel Ali', sector: 'Labor Accommodations', location: 'Dubai', client: 'Allied contg', scope: 'Doors & Cupboards', value: 'DHS 1,200,000.00', image: images.labor, featured: false },
-  { id: 14, title: 'G+2 Labour Camp', sector: 'Labor Accommodations', location: 'Dubai', client: 'ANC', scope: 'Doors', value: 'DHS 840,000.00', image: images.labor, featured: false },
-  { id: 15, title: 'G+2 Labor Accommodation', sector: 'Labor Accommodations', location: 'Dubai', client: 'Obaid Bin Sheikh Contg', scope: 'Doors', value: 'DHS 225,000.00', image: images.labor, featured: false },
-  { id: 16, title: 'Labor Camp at Sajja', sector: 'Labor Accommodations', location: 'Sharjah', client: 'Ashiyana Contracting', scope: 'Doors', value: 'DHS 200,000.00', image: images.labor, featured: false },
-  { id: 17, title: 'G+1 Labour Accom. & Office At Sajja', sector: 'Labor Accommodations', location: 'Sharjah', client: 'Ashiyana contg', scope: 'Doors', value: 'DHS 84,000.00', image: images.labor, featured: false },
+  { id: 13, title: 'G+4 Labour Accom. At Jebel Ali', sector: 'Labor Accommodations', location: 'Dubai', client: 'Allied contg', scope: 'Doors & Cupboards',  image: images.labor, featured: false },
+  { id: 14, title: 'G+2 Labour Camp', sector: 'Labor Accommodations', location: 'Dubai', client: 'ANC', scope: 'Doors',  image: images.labor, featured: false },
+  { id: 15, title: 'G+2 Labor Accommodation', sector: 'Labor Accommodations', location: 'Dubai', client: 'Obaid Bin Sheikh Contg', scope: 'Doors',  image: images.labor, featured: false },
+  { id: 16, title: 'Labor Camp at Sajja', sector: 'Labor Accommodations', location: 'Sharjah', client: 'Ashiyana Contracting', scope: 'Doors',  image: images.labor, featured: false },
+  { id: 17, title: 'G+1 Labour Accom. & Office At Sajja', sector: 'Labor Accommodations', location: 'Sharjah', client: 'Ashiyana contg', scope: 'Doors',  image: images.labor, featured: false },
 
   // --- Residential (High-Value Multi-Unit & Villas) ---
-  { id: 18, title: 'Al Maskan, 33 Nos. Villas', sector: 'Residential', location: 'Dubai', client: 'Three Star Contg.', scope: 'Doors & Cupboards', value: 'DHS 2,046,000.00', image: images.residential, featured: true },
-  { id: 19, title: '6 Nos Villas at Al Barsha', sector: 'Residential', location: 'Dubai', client: 'Vista Star Constn', scope: 'Doors, Cupboards & Interior', value: 'DHS 1,900,000.00', image: images.residential, featured: false },
-  { id: 20, title: '4 Luxury Villas at Al Barsha-1', sector: 'Residential', location: 'Dubai', client: 'Vista Star Constn.', scope: 'Doors & Cupboards', value: 'DHS 1,843,000.00', image: images.residential, featured: false },
-  { id: 21, title: 'G+6+R Building at Me\'aisem First', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contracting', scope: 'Doors, Wardrobes', value: 'DHS 1,800,000.00', image: images.residential, featured: false },
-  { id: 22, title: '(1B+G+10F+R) Building at Al Barsha South 3rd', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contracting', scope: 'Doors & Frames', value: 'DHS 1,350,000.00', image: images.residential, featured: false },
-  { id: 23, title: 'G+1+R Villa at Pearl Jumeirah', sector: 'Residential', location: 'Dubai', client: 'Mirwais Alizai', scope: 'Full Joinery Works', value: 'DHS 1,200,000.00', image: images.residential, featured: false },
-  { id: 24, title: 'G+1+R Villa at Polo Homes', sector: 'Residential', location: 'Dubai', client: 'Mr. Atul Mittal', scope: 'Full Joinery Works', value: 'DHS 1,060,000.00', image: images.residential, featured: false },
-  { id: 25, title: 'B+G+2p+10 Storey Bldg', sector: 'Residential', location: 'Sharjah', client: 'UNEC', scope: 'Doors & Cupboards', value: 'DHS 1,050,000.00', image: images.residential, featured: false },
-  { id: 26, title: '10 Villas in Mirdif', sector: 'Residential', location: 'Dubai', client: 'Baith Al Yazi Contg', scope: 'Doors & Cupboards', value: 'DHS 1,012,000.00', image: images.residential, featured: false },
-  { id: 27, title: 'G+1+R Villa at Polo Homes', sector: 'Residential', location: 'Dubai', client: 'Ravi Hinduja', scope: 'Full Joinery Works', value: 'DHS 930,000.00', image: images.residential, featured: false },
-  { id: 28, title: 'B+G+6+Gym Bldg at Al Warqa', sector: 'Residential', location: 'Dubai', client: 'Allied contg', scope: 'Doors, cupboards & Kitchen', value: 'DHS 860,000.00', image: images.residential, featured: false },
-  { id: 29, title: 'G+1 Residential Villa (4 Nos)', sector: 'Residential', location: 'Dubai', client: 'Mohd. Habib Mohd.', scope: 'Doors', value: 'DHS 760,000.00', image: images.residential, featured: false },
-  { id: 30, title: '5 Nos G+1 Villas at Al Khawaneej', sector: 'Residential', location: 'Dubai', client: 'Dektor Contg', scope: 'Doors & Cupboards', value: 'DHS 750,000.00', image: images.residential, featured: false },
-  { id: 31, title: 'G+1 Luxury Villa at Pearl Jumeirah', sector: 'Residential', location: 'Dubai', client: 'Allied contg', scope: 'Doors, Cupboards & Interior', value: 'DHS 680,000.00', image: images.residential, featured: false },
-  { id: 32, title: 'G+3 Bldg at Dubai Land', sector: 'Residential', location: 'Dubai', client: 'Al Ishrak Contracting', scope: 'Doors & Cupboards', value: 'DHS 630,000.00', image: images.residential, featured: false },
-  { id: 33, title: 'G+1 Residential Villa (3 Nos)', sector: 'Residential', location: 'Dubai', client: 'Latifa Habib Mohd.', scope: 'Doors', value: 'DHS 570,000.00', image: images.residential, featured: false },
-  { id: 34, title: '4 Nos G+1 Villas at Mirdif', sector: 'Residential', location: 'Dubai', client: 'Dektor contg', scope: 'Doors & Cupboards', value: 'DHS 550,000.00', image: images.residential, featured: false },
-  { id: 35, title: '3 Nos Res. Luxury Villas at Jumeira', sector: 'Residential', location: 'Dubai', client: 'YACC Contg', scope: 'Doors & Cabinets', value: 'DHS 440,000.00', image: images.residential, featured: false },
-  { id: 36, title: '6 Villas at Jumeirah', sector: 'Residential', location: 'Dubai', client: 'Kalki Contg', scope: 'Doors & Cupboards', value: 'DHS 420,000.00', image: images.residential, featured: false },
-  { id: 37, title: 'B+G+4+R Bldg at Al Murar', sector: 'Residential', location: 'Dubai', client: 'Ashiyana contg', scope: 'Doors', value: 'DHS 370,000.00', image: images.residential, featured: false },
-  { id: 38, title: '6 Villas at Mirdif', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contg', scope: 'Doors & Cupboards', value: 'DHS 341,000.00', image: images.residential, featured: false },
-  { id: 39, title: 'G+1 Luxury Villa at Al Warqa', sector: 'Residential', location: 'Dubai', client: 'Tak Constructions', scope: 'Doors', value: 'DHS 261,216.00', image: images.residential, featured: false },
-  { id: 40, title: 'G+3 Residential Building', sector: 'Residential', location: 'Dubai', client: 'Obaid Bin Sheikh Contg', scope: 'Doors', value: 'DHS 250,000.00', image: images.residential, featured: false },
-  { id: 41, title: 'G+2 Res Building, Naif', sector: 'Residential', location: 'Dubai', client: 'Rotana Contractin', scope: 'Doors', value: 'DHS 240,000.00', image: images.residential, featured: false },
-  { id: 42, title: 'G+2+Roof Bldg at Muteena', sector: 'Residential', location: 'Dubai', client: 'Dani Construction', scope: 'Doors', value: 'DHS 210,000.00', image: images.residential, featured: false },
-  { id: 43, title: 'G+1 Villa at Al Barsha', sector: 'Residential', location: 'Dubai', client: 'Arif Al Abbas', scope: 'Doors & Cupboards', value: 'DHS 150,000.00', image: images.residential, featured: false },
-  { id: 44, title: 'G+2 Res. Bldg at Muteena', sector: 'Residential', location: 'Dubai', client: 'Dani Construction', scope: 'Doors', value: 'DHS 110,000.00', image: images.residential, featured: false },
-  { id: 45, title: 'G+1 Villa at Nad Al Hamer', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contg', scope: 'Doors', value: 'DHS 100,000.00', image: images.residential, featured: false },
-  { id: 46, title: 'G+1 Villa at Umm Suqueim', sector: 'Residential', location: 'Dubai', client: 'Abdul Rahman Ali', scope: 'Doors', value: 'DHS 100,000.00', image: images.residential, featured: false },
-  { id: 47, title: 'G+M+1 Building, Naif', sector: 'Residential', location: 'Dubai', client: 'Al Menhal Contrg.', scope: 'Doors', value: 'DHS 100,000.00', image: images.residential, featured: false },
-  { id: 48, title: 'Al Aweer Farm House', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contg', scope: 'Doors', value: 'DHS 70,000.00', image: images.residential, featured: false },
+  { id: 18, title: 'Al Maskan, 33 Nos. Villas', sector: 'Residential', location: 'Dubai', client: 'Three Star Contg.', scope: 'Doors & Cupboards',  image: images.residential, featured: true },
+  { id: 19, title: '6 Nos Villas at Al Barsha', sector: 'Residential', location: 'Dubai', client: 'Vista Star Constn', scope: 'Doors, Cupboards & Interior',  image: images.residential, featured: false },
+  { id: 20, title: '4 Luxury Villas at Al Barsha-1', sector: 'Residential', location: 'Dubai', client: 'Vista Star Constn.', scope: 'Doors & Cupboards',  image: images.residential, featured: false },
+  { id: 21, title: 'G+6+R Building at Me\'aisem First', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contracting', scope: 'Doors, Wardrobes',  image: images.residential, featured: false },
+  { id: 22, title: '(1B+G+10F+R) Building at Al Barsha South 3rd', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contracting', scope: 'Doors & Frames', image: images.residential, featured: false },
+  { id: 23, title: 'G+1+R Villa at Pearl Jumeirah', sector: 'Residential', location: 'Dubai', client: 'Mirwais Alizai', scope: 'Full Joinery Works',  image: images.residential, featured: false },
+  { id: 24, title: 'G+1+R Villa at Polo Homes', sector: 'Residential', location: 'Dubai', client: 'Mr. Atul Mittal', scope: 'Full Joinery Works',  image: images.residential, featured: false },
+  { id: 25, title: 'B+G+2p+10 Storey Bldg', sector: 'Residential', location: 'Sharjah', client: 'UNEC', scope: 'Doors & Cupboards',  image: images.residential, featured: false },
+  { id: 26, title: '10 Villas in Mirdif', sector: 'Residential', location: 'Dubai', client: 'Baith Al Yazi Contg', scope: 'Doors & Cupboards',  image: images.residential, featured: false },
+  { id: 27, title: 'G+1+R Villa at Polo Homes', sector: 'Residential', location: 'Dubai', client: 'Ravi Hinduja', scope: 'Full Joinery Works',  image: images.residential, featured: false },
+  { id: 28, title: 'B+G+6+Gym Bldg at Al Warqa', sector: 'Residential', location: 'Dubai', client: 'Allied contg', scope: 'Doors, cupboards & Kitchen',  image: images.residential, featured: false },
+  { id: 29, title: 'G+1 Residential Villa (4 Nos)', sector: 'Residential', location: 'Dubai', client: 'Mohd. Habib Mohd.', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 30, title: '5 Nos G+1 Villas at Al Khawaneej', sector: 'Residential', location: 'Dubai', client: 'Dektor Contg', scope: 'Doors & Cupboards',  image: images.residential, featured: false },
+  { id: 31, title: 'G+1 Luxury Villa at Pearl Jumeirah', sector: 'Residential', location: 'Dubai', client: 'Allied contg', scope: 'Doors, Cupboards & Interior',  image: images.residential, featured: false },
+  { id: 32, title: 'G+3 Bldg at Dubai Land', sector: 'Residential', location: 'Dubai', client: 'Al Ishrak Contracting', scope: 'Doors & Cupboards',  image: images.residential, featured: false },
+  { id: 33, title: 'G+1 Residential Villa (3 Nos)', sector: 'Residential', location: 'Dubai', client: 'Latifa Habib Mohd.', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 34, title: '4 Nos G+1 Villas at Mirdif', sector: 'Residential', location: 'Dubai', client: 'Dektor contg', scope: 'Doors & Cupboards',  image: images.residential, featured: false },
+  { id: 35, title: '3 Nos Res. Luxury Villas at Jumeira', sector: 'Residential', location: 'Dubai', client: 'YACC Contg', scope: 'Doors & Cabinets',  image: images.residential, featured: false },
+  { id: 36, title: '6 Villas at Jumeirah', sector: 'Residential', location: 'Dubai', client: 'Kalki Contg', scope: 'Doors & Cupboards',  image: images.residential, featured: false },
+  { id: 37, title: 'B+G+4+R Bldg at Al Murar', sector: 'Residential', location: 'Dubai', client: 'Ashiyana contg', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 38, title: '6 Villas at Mirdif', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contg', scope: 'Doors & Cupboards',  image: images.residential, featured: false },
+  { id: 39, title: 'G+1 Luxury Villa at Al Warqa', sector: 'Residential', location: 'Dubai', client: 'Tak Constructions', scope: 'Doors', image: images.residential, featured: false },
+  { id: 40, title: 'G+3 Residential Building', sector: 'Residential', location: 'Dubai', client: 'Obaid Bin Sheikh Contg', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 41, title: 'G+2 Res Building, Naif', sector: 'Residential', location: 'Dubai', client: 'Rotana Contractin', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 42, title: 'G+2+Roof Bldg at Muteena', sector: 'Residential', location: 'Dubai', client: 'Dani Construction', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 43, title: 'G+1 Villa at Al Barsha', sector: 'Residential', location: 'Dubai', client: 'Arif Al Abbas', scope: 'Doors & Cupboards',  image: images.residential, featured: false },
+  { id: 44, title: 'G+2 Res. Bldg at Muteena', sector: 'Residential', location: 'Dubai', client: 'Dani Construction', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 45, title: 'G+1 Villa at Nad Al Hamer', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contg', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 46, title: 'G+1 Villa at Umm Suqueim', sector: 'Residential', location: 'Dubai', client: 'Abdul Rahman Ali', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 47, title: 'G+M+1 Building, Naif', sector: 'Residential', location: 'Dubai', client: 'Al Menhal Contrg.', scope: 'Doors',  image: images.residential, featured: false },
+  { id: 48, title: 'Al Aweer Farm House', sector: 'Residential', location: 'Dubai', client: 'Ashiyana Contg', scope: 'Doors', image: images.residential, featured: false },
 ];
 
 // Updated filter options representing actual portfolio segments
@@ -109,10 +109,7 @@ function ProjectCard({ project }) {
             <span className='block text-[0.65rem] uppercase tracking-wider text-black/50 mb-1'>Client</span>
             <span className='font-medium text-black line-clamp-1'>{project.client}</span>
           </div>
-          <div>
-            <span className='block text-[0.65rem] uppercase tracking-wider text-black/50 mb-1'>Project Value</span>
-            <span className='font-bold text-[#1A3278]'>{project.value}</span>
-          </div>
+
         </div>
       </div>
     </article>
@@ -170,7 +167,7 @@ function Works() {
             Delivered Projects
           </h1>
           <p className='work-hero-copy max-w-[560px] text-sm leading-relaxed text-black/70 sm:text-base lg:pb-3'>
-            Explore  verified V R S TECHNICAL SERVICES projects across 6 core sectors. Data reflects actual client scopes, locations, and finalized contract values.
+            Explore  verified V R S TECHNICAL SERVICES projects across 6 core sectors. Data reflects actual client scopes, locations.
           </p>
         </div>
       </section>

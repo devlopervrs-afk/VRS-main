@@ -10,35 +10,35 @@ const ChooseUs = () => {
   const imageWrapRef = useRef(null)
   const imageCardRef = useRef(null)
 
-  const services = [
+  const differentiators = [
     {
-      category: 'INTERIOR FIT-OUTS',
+      category: 'IN-HOUSE TECHNICAL DEPTH',
       items: [
-        { id: '01', name: 'Turnkey renovation and fit-out solutions for villas, apartments, office, and retail spaces.' },
+        { id: '01', name: 'Dedicated in-house capability for shop drawings, sample approvals, and execution-ready detailing.' },
       ],
     },
     {
-      category: 'WOODWORK & JOINERY',
+      category: 'JOINERY CONTROL',
       items: [
-        { id: '02', name: 'In-house manufacturing of wooden doors, wardrobes, kitchen cabinets, and vanity units.' },
+        { id: '02', name: 'Factory-backed custom joinery delivery for doors, wardrobes, kitchens, cabinetry, and wood packages.' },
       ],
     },
     {
-      category: 'ARCHITECTURAL DETAILING',
+      category: 'PROJECT GOVERNANCE',
       items: [
-        { id: '03', name: 'High-quality wooden paneling, decorative handrails, wooden floorings, and custom pergolas.' },
+        { id: '03', name: 'Structured project management with itemized estimates, planned schedules, and execution coordination.' },
       ],
     },
     {
-      category: 'EXHIBITIONS & EVENTS',
+      category: 'PROVEN DELIVERY SCALE',
       items: [
-        { id: '04', name: 'End-to-end conceptualization, design, and execution of exhibition stands and event spaces.' },
+        { id: '04', name: 'Track record across hospitality, residential, retail, commercial, and institutional project segments.' },
       ],
     },
     {
-      category: 'DESIGN & MANAGEMENT',
+      category: 'REGIONAL EXECUTION',
       items: [
-        { id: '05', name: 'Comprehensive architectural design, shop drawings, cost estimates, and project coordination.' },
+        { id: '05', name: 'Operational readiness for Dubai, wider UAE, and GCC project requirements with quality-first finishing.' },
       ],
     },
   ]
@@ -176,24 +176,30 @@ const ChooseUs = () => {
           <div className='mt-1 flex items-start gap-3 pt-2 lg:w-1/4'>
             <div className='mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#22409a]'></div>
             <h2 data-rise-text className='font-switzer text-[0.72rem] tracking-[0.18em] text-black/80 uppercase'>
-              OUR SERVICE SCOPE
+              WHY VRS
             </h2>
           </div>
 
           <div className='space-y-1 lg:w-3/4'>
-            <h1 data-rise-text className='font-cbyg text-[3.2rem] leading-none text-[#F39838] sm:text-[4.5rem] lg:text-[6rem]'>
-              Turnkey Solutions
+            <h1 data-rise-text className='font-switzer text-[2.45rem] leading-[0.95] font-semibold tracking-tight text-[#0b1329] sm:text-[3.2rem] lg:text-[4.25rem]'>
+              Why Clients Choose VRS Over Other Fit-Out Companies
             </h1>
-            <p data-rise-text className='font-switzer text-[1.2rem] leading-[1.2] tracking-tight md:text-[1.65rem] lg:max-w-[92%]'>
-              We provide comprehensive turnkey solutions for joinery, interior fit-outs, and events, delivering uncompromised quality and materials across the UAE and GCC.
+            <p data-rise-text className='font-switzer text-[1.05rem] leading-[1.35] tracking-tight md:text-[1.2rem] lg:max-w-[95%]'>
+              VRS combines in-house technical capability, controlled joinery execution, and structured project management.
+              This gives clients better visibility, stronger quality control, and lower execution risk from planning to handover.
             </p>
           </div>
         </div>
 
         <div className='grid grid-cols-1 gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14 '>
           <div className='rounded-[24px] border border-black/6 bg-white/95 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.08)] md:p-10'>
+            <div className='mb-6 grid gap-3 rounded-xl border border-black/10 bg-[#f8f9fc] p-4 text-sm leading-relaxed text-black/70 md:grid-cols-2'>
+              <p data-rise-text>Typical Market Challenge: fragmented vendors and limited accountability.</p>
+              <p data-rise-text>VRS Approach: integrated design, joinery, and execution with one delivery structure.</p>
+            </div>
+
             <div className='flex flex-col gap-9'>
-              {services.map((section) => (
+              {differentiators.map((section) => (
                 <div
                   key={section.category}
                   className='grid gap-5 border-b border-black/10 pb-7 last:border-none last:pb-0 md:grid-cols-[0.36fr_0.64fr] md:gap-8'
@@ -209,7 +215,7 @@ const ChooseUs = () => {
                       <div
                         key={item.id}
                         data-rise-text
-                        className='font-switzer text-[1.08rem] leading-[1.2] tracking-tight text-black transition-all duration-500 hover:translate-x-2 hover:text-[#22409a] md:text-[1.26rem]'
+                        className='font-switzer text-[1rem] leading-[1.35] tracking-tight text-black transition-all duration-500 hover:translate-x-2 hover:text-[#22409a] md:text-[1.08rem]'
                       >
                         ({item.id}) {item.name}
                       </div>
@@ -217,6 +223,21 @@ const ChooseUs = () => {
                   </div>
                 </div>
               ))}
+            </div>
+
+            <div className='mt-8 border-t border-black/10 pt-6 flex flex-wrap gap-3'>
+              <Link
+                to='/contact'
+                className='rounded-full bg-[#22409a] px-5 py-2.5 font-switzer text-[0.72rem] tracking-[0.14em] text-white uppercase transition duration-300 hover:translate-y-[-1px] hover:bg-[#1a3278]'
+              >
+                Request Site Visit
+              </Link>
+              <Link
+                to='/projects'
+                className='rounded-full border border-black/30 px-5 py-2.5 font-switzer text-[0.72rem] tracking-[0.14em] text-black uppercase transition duration-300 hover:bg-black/5'
+              >
+                View Delivered Projects
+              </Link>
             </div>
           </div>
 
@@ -229,8 +250,8 @@ const ChooseUs = () => {
                 className='h-[430px] w-full rounded-[24px] object-cover shadow-[0_24px_55px_rgba(0,0,0,0.18)]'
               />
               <div className='absolute right-4 bottom-4 rounded-xl bg-black/70 px-4 py-3 text-white backdrop-blur-sm'>
-                <p data-rise-text className='font-switzer text-[0.62rem] tracking-[0.16em] text-white/80 uppercase'>Successfully Finished</p>
-                <p data-rise-text className='font-cbyg text-[2.5rem] leading-none text-[#F39838]'>1000+ Projects</p>
+                <p data-rise-text className='font-switzer text-[0.62rem] tracking-[0.16em] text-white/80 uppercase'>Verified Delivery Strength</p>
+                <p data-rise-text className='font-switzer text-[1.05rem] leading-tight font-semibold text-[#F39838]'>1000+ Projects | 9 Specialized Departments</p>
               </div>
             </div>
           </div>
