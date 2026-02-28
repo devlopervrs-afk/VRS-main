@@ -16,7 +16,7 @@ const socialLinks = [
 
 function Footer() {
   return (
-    <footer className='mt-20 w-full border-t border-black/10 bg-[#1A3278] px-5 py-8 text-white sm:px-7 sm:py-10 rounded-xl'>
+    <footer className='mt-20 w-full border-t border-black/10 bg-[#1A3278] px-5 py-8 text-white sm:px-7 sm:py-10 rounded-lg'>
       <div className='flex w-full flex-col gap-8'>
         <div className='flex flex-col gap-6 md:flex-row md:items-start md:justify-between'>
           <div className='max-w-[300px]'>

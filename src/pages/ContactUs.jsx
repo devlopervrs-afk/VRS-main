@@ -54,7 +54,7 @@ const ContactUs = () => {
             // Using a placeholder image similar to the reference
             src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=1558&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" 
             alt="Fashion Models" 
-            className="w-full h-[500px] lg:h-[600px] object-cover"
+            className="w-full h-[500px] lg:h-[600px] object-cover rounded-lg"
           />
         </div>
 
@@ -67,7 +67,7 @@ const ContactUs = () => {
           </h1>
 
           {/* Form & Info Container */}
-          <div className="border border-black p-8 md:p-12">
+          <div className="border border-black p-8 md:p-12 rounded-lg">
             <div className="grid grid-cols-1 md:grid-cols-2 gap-12 md:gap-8">
               
               {/* Form Section */}

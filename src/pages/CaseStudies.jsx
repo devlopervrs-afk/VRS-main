@@ -46,7 +46,7 @@ function CaseStudies() {
         {visibleItems.map((item) => (
           <article
             key={item.slug}
-            className='overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_12px_30px_rgba(10,18,40,0.08)]'
+            className='overflow-hidden rounded-lg border border-black/10 bg-white shadow-[0_12px_30px_rgba(10,18,40,0.08)]'
           >
             <img src={item.heroImage} alt={item.title} className='h-56 w-full object-cover' loading='lazy' />
             <div className='p-5'>

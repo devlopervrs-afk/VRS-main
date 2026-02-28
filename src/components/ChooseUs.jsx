@@ -192,8 +192,8 @@ const ChooseUs = () => {
         </div>
 
         <div className='grid grid-cols-1 gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14 '>
-          <div className='rounded-[24px] border border-black/6 bg-white/95 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.08)] md:p-10'>
-            <div className='mb-6 grid gap-3 rounded-xl border border-black/10 bg-[#f8f9fc] p-4 text-sm leading-relaxed text-black/70 md:grid-cols-2'>
+          <div className='rounded-lg border border-black/6 bg-white/95 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.08)] md:p-10'>
+            <div className='mb-6 grid gap-3 rounded-lg border border-black/10 bg-[#f8f9fc] p-4 text-sm leading-relaxed text-black/70 md:grid-cols-2'>
               <p data-rise-text>Typical Market Challenge: fragmented vendors and limited accountability.</p>
               <p data-rise-text>VRS Approach: integrated design, joinery, and execution with one delivery structure.</p>
             </div>
@@ -243,13 +243,13 @@ const ChooseUs = () => {
 
           <div ref={imageWrapRef} className='relative mx-auto w-full max-w-[350px] lg:mx-0 lg:ml-auto mt-30'>
             <div ref={imageCardRef} className='relative will-change-transform'>
-              <div className='pointer-events-none absolute -inset-3 -z-10 rounded-[26px] bg-[#22409a]/16 rotate-[4deg]'></div>
+              <div className='pointer-events-none absolute -inset-3 -z-10 rounded-lg bg-[#22409a]/16 rotate-[4deg]'></div>
               <img
                 src='https://cityfurnish.com/blog/wp-content/uploads/2023/09/modren-room-home-interior-design-min.jpg'
                 alt='Interior design workspace'
-                className='h-[430px] w-full rounded-[24px] object-cover shadow-[0_24px_55px_rgba(0,0,0,0.18)]'
+                className='h-[430px] w-full rounded-lg object-cover shadow-[0_24px_55px_rgba(0,0,0,0.18)]'
               />
-              <div className='absolute right-4 bottom-4 rounded-xl bg-black/70 px-4 py-3 text-white backdrop-blur-sm'>
+              <div className='absolute right-4 bottom-4 rounded-lg bg-black/70 px-4 py-3 text-white backdrop-blur-sm'>
                 <p data-rise-text className='font-switzer text-[0.62rem] tracking-[0.16em] text-white/80 uppercase'>Verified Delivery Strength</p>
                 <p data-rise-text className='font-switzer text-[1.05rem] leading-tight font-semibold text-[#F39838]'>1000+ Projects | 9 Specialized Departments</p>
               </div>

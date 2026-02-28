@@ -81,7 +81,7 @@ const filterOptions = ['All', 'Residential', 'Commercial', 'Hospitality', 'Retai
 
 function ProjectCard({ project }) {
   return (
-    <article className='work-card overflow-hidden rounded-2xl border border-black/10 bg-white shadow-[0_12px_34px_rgba(10,18,40,0.08)] flex flex-col'>
+    <article className='work-card overflow-hidden rounded-lg border border-black/10 bg-white shadow-[0_12px_34px_rgba(10,18,40,0.08)] flex flex-col'>
       <div className='h-[240px] w-full overflow-hidden shrink-0'>
         <img
           src={project.image}
@@ -181,7 +181,7 @@ function Works() {
       </section>
 
       {/* Filter Options */}
-      <section className='mt-10 rounded-2xl border border-black/10 bg-[#f8f9fc] p-4 sm:p-5 m-5'>
+      <section className='mt-10 rounded-lg border border-black/10 bg-[#f8f9fc] p-4 sm:p-5 m-5'>
         <div className='mb-3 flex items-center justify-between gap-3'>
           <p className='text-[0.7rem] tracking-[0.12em] text-black/55 uppercase'>
             Showing {filteredProjects.length} Project{filteredProjects.length === 1 ? '' : 's'}
@@ -213,7 +213,7 @@ function Works() {
         ))}
       </section>
 
-      <section className='mt-12 rounded-2xl border border-black/15 p-6 text-black sm:p-8 m-5'>
+      <section className='mt-12 rounded-lg border border-black/15 p-6 text-black sm:p-8 m-5'>
         <div className='flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between'>
           <div className='max-w-[760px]'>
             <p className='text-[0.7rem] tracking-[0.14em] text-black/75 uppercase'>Project Enquiry</p>

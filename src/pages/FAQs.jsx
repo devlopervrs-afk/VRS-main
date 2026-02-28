@@ -81,7 +81,7 @@ function FAQs() {
           {faqData.map((item, index) => {
             const isOpen = activeIndex === index;
             return (
-              <article key={item.question} className='rounded-2xl border border-black/10 bg-[#f8f8f8]'>
+              <article key={item.question} className='rounded-lg border border-black/10 bg-[#f8f8f8]'>
                 <button
                   type='button'
                   onClick={() => setActiveIndex(isOpen ? -1 : index)}

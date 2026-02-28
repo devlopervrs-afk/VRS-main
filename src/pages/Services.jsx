@@ -144,8 +144,8 @@ function Services() {
         {serviceCards.map((item) => {
           const Icon = item.icon;
           return (
-            <article key={item.title} className='services-card rounded-2xl border border-black/10 bg-white p-5 shadow-[0_12px_30px_rgba(10,18,40,0.08)] sm:p-6'>
-              <div className='mb-4 h-44 w-full overflow-hidden rounded-xl'>
+            <article key={item.title} className='services-card rounded-lg border border-black/10 bg-white p-5 shadow-[0_12px_30px_rgba(10,18,40,0.08)] sm:p-6'>
+              <div className='mb-4 h-44 w-full overflow-hidden rounded-md'>
                 <img
                   src={item.image}
                   alt={item.title}
@@ -171,7 +171,7 @@ function Services() {
         })}
       </section>
 
-      <section className='services-reveal mx-auto mt-12 w-full max-w-[1280px] rounded-2xl border border-black/10 bg-[#f8f9fc] p-5 sm:p-6 lg:p-8'>
+      <section className='services-reveal mx-auto mt-12 w-full max-w-[1280px] rounded-lg border border-black/10 bg-[#f8f9fc] p-5 sm:p-6 lg:p-8'>
         <div className='mb-6 flex flex-col gap-3 lg:flex-row lg:items-end lg:justify-between'>
           <div>
             <p className='text-[0.7rem] tracking-[0.14em] text-black/55 uppercase'>Execution Framework</p>
@@ -184,7 +184,7 @@ function Services() {
 
         <div className='grid grid-cols-1 gap-3 md:grid-cols-2 lg:grid-cols-5'>
           {processSteps.map((step) => (
-            <article key={step.id} className='services-step rounded-xl border border-black/10 bg-white p-4'>
+            <article key={step.id} className='services-step rounded-md border border-black/10 bg-white p-4'>
               <p className='text-[0.72rem] font-medium tracking-[0.1em] text-[#1A3278] uppercase'>{step.id}</p>
               <h3 className='mt-1 text-[1.02rem] font-semibold leading-tight text-[#0b1329]'>{step.title}</h3>
               <p className='mt-2 text-[0.82rem] leading-relaxed text-black/65'>{step.text}</p>
@@ -193,7 +193,7 @@ function Services() {
         </div>
       </section>
 
-      <section className='mx-auto mt-12 w-full max-w-[1280px] rounded-2xl border border-black/15 p-6 sm:p-8'>
+      <section className='mx-auto mt-12 w-full max-w-[1280px] rounded-lg border border-black/15 p-6 sm:p-8'>
         <div className='flex flex-col gap-5 lg:flex-row lg:items-end lg:justify-between'>
           <div className='max-w-[760px]'>
             <p className='text-[0.7rem] tracking-[0.14em] text-black/75 uppercase'>Service Enquiry</p>
