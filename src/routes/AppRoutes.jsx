@@ -9,6 +9,7 @@ import AboutUs from '../pages/AboutUs';
 import NotFound from '../pages/NotFound';
 import CaseStudies from '../pages/CaseStudies';
 import CaseStudyDetail from '../pages/CaseStudyDetail';
+import ProjectDetail from '../pages/ProjectDetail';
 
 function AppRoutes() {
   return (
@@ -16,6 +17,7 @@ function AppRoutes() {
         <Route path='/' element={<Home/>} />
         <Route path='/faqs' element={<FAQs/>} />
         <Route path='/projects' element={<Works/>} />
+        <Route path='/projects/:slug' element={<ProjectDetail/>} />
         <Route path='/case-studies' element={<CaseStudies/>} />
         <Route path='/case-studies/:slug' element={<CaseStudyDetail/>} />
         <Route path='/services' element={<Services/>} />

@@ -1,264 +1,135 @@
-import React, { useLayoutEffect, useRef } from 'react'
-import { gsap } from 'gsap'
-import { ScrollTrigger } from 'gsap/ScrollTrigger'
-import { Link } from 'react-router-dom'
+import React from 'react';
+import { LayoutGrid, Zap, PieChart, Users, Target, TrendingUp } from 'lucide-react';
 
-gsap.registerPlugin(ScrollTrigger)
+const Badge = ({ baseColor, topColor }) => (
+  <div className="absolute -top-4 left-1/2 -translate-x-1/2 w-10 h-10 flex items-center justify-center z-10">
+    <div className={`w-8 h-8 rounded-full ${baseColor} absolute ml-2 mt-2 shadow-sm`}></div>
+    <div className={`w-8 h-8 rounded-full ${topColor} absolute shadow-sm border border-white/20`}></div>
+  </div>
+);
 
-const ChooseUs = () => {
-  const sectionRef = useRef(null)
-  const imageWrapRef = useRef(null)
-  const imageCardRef = useRef(null)
+const FeatureCard = ({ title, description, icon: Icon, badgeColors, innerBg, textColor, iconColor, transform }) => (
+  <div className={`relative w-full max-w-[340px] ${transform} transition-transform hover:scale-105 duration-300 bg-white p-3 rounded-[2rem] shadow-[0_8px_30px_rgb(0,0,0,0.06)] border border-gray-100/80 bg-opacity-95 backdrop-blur-sm z-10`}>
+    <Badge baseColor={badgeColors.base} topColor={badgeColors.top} />
+    <div className={`${innerBg} p-8 rounded-[1.5rem] min-h-[260px] flex flex-col`}>
+      <div className="mb-5">
+        <Icon className={`w-7 h-7 ${iconColor}`} strokeWidth={2.5} />
+      </div>
+      <h3 className={`text-[22px] font-bold ${textColor} mb-3 tracking-tight`}>
+        {title}
+      </h3>
+      <p className="text-gray-500/90 leading-relaxed text-[15px] font-medium">
+        {description}
+      </p>
+    </div>
+  </div>
+);
 
-  const differentiators = [
+const SevenFigureAgencyClone = () => {
+  const features = [
     {
-      category: 'IN-HOUSE TECHNICAL DEPTH',
-      items: [
-        { id: '01', name: 'Dedicated in-house capability for shop drawings, sample approvals, and execution-ready detailing.' },
-      ],
+      title: "Expertise",
+      description: "We leverage over 15 years of experience to deliver high-quality, tailored solutions for every client.",
+      icon: LayoutGrid,
+      badgeColors: { base: "bg-yellow-500", top: "bg-yellow-300" },
+      innerBg: "bg-amber-50/70",
+      textColor: "text-gray-900",
+      iconColor: "text-yellow-600",
+      transform: "-rotate-[3deg] translate-y-0"
     },
     {
-      category: 'JOINERY CONTROL',
-      items: [
-        { id: '02', name: 'Factory-backed custom joinery delivery for doors, wardrobes, kitchens, cabinetry, and wood packages.' },
-      ],
+      title: "Custom Solutions",
+      description: "Each solution is personalized, ensuring that your business gets the exact tools it needs to succeed.",
+      icon: Zap,
+      badgeColors: { base: "bg-purple-700", top: "bg-purple-500" },
+      innerBg: "bg-purple-50/70",
+      textColor: "text-gray-900",
+      iconColor: "text-purple-600",
+      transform: "rotate-[2deg] translate-y-[40px]"
     },
     {
-      category: 'PROJECT GOVERNANCE',
-      items: [
-        { id: '03', name: 'Structured project management with itemized estimates, planned schedules, and execution coordination.' },
-      ],
+      title: "Customer-Focused",
+      description: "We prioritize your satisfaction and aim to exceed your expectations in every project we take on.",
+      icon: PieChart,
+      badgeColors: { base: "bg-pink-600", top: "bg-pink-400" },
+      innerBg: "bg-pink-50/70",
+      textColor: "text-gray-900",
+      iconColor: "text-pink-500",
+      transform: "rotate-[2deg] translate-y-[-10px]"
     },
     {
-      category: 'PROVEN DELIVERY SCALE',
-      items: [
-        { id: '04', name: 'Track record across hospitality, residential, retail, commercial, and institutional project segments.' },
-      ],
+      title: "Proven Results",
+      description: "Our track record speaks for itself. We've helped hundreds of businesses scale to new heights.",
+      icon: Users,
+      badgeColors: { base: "bg-blue-700", top: "bg-blue-500" },
+      innerBg: "bg-blue-50/70",
+      textColor: "text-gray-900",
+      iconColor: "text-blue-500",
+      transform: "-rotate-[2deg] translate-y-[30px]"
     },
     {
-      category: 'REGIONAL EXECUTION',
-      items: [
-        { id: '05', name: 'Operational readiness for Dubai, wider UAE, and GCC project requirements with quality-first finishing.' },
-      ],
+      title: "Strategic Clarity",
+      description: "We eliminate guesswork, providing clear roadmaps and actionable data for your growth.",
+      icon: Target,
+      badgeColors: { base: "bg-emerald-600", top: "bg-emerald-400" },
+      innerBg: "bg-emerald-50/70",
+      textColor: "text-gray-900",
+      iconColor: "text-emerald-500",
+      transform: "-rotate-[3deg] translate-y-[-20px]"
     },
-  ]
-
-  useLayoutEffect(() => {
-    const sectionElement = sectionRef.current
-    if (!sectionElement) return
-
-    const textElements = sectionElement.querySelectorAll('h1, h2, h3, p, span, [data-rise-text]')
-    const imageWrapElement = imageWrapRef.current
-    const imageCardElement = imageCardRef.current
-    let removeMouseHandlers = () => {}
-
-    const context = gsap.context(() => {
-      gsap.set(textElements, { autoAlpha: 0, y: 56, filter: 'blur(10px)' })
-
-      if (imageWrapElement) {
-        gsap.set(imageWrapElement, { autoAlpha: 0, y: 64, scale: 0.96 })
-      }
-
-      const revealTimeline = gsap.timeline({
-        scrollTrigger: {
-          trigger: sectionElement,
-          start: 'top 62%',
-          toggleActions: 'play none none none',
-          once: true,
-        },
-      })
-
-      revealTimeline.to(textElements, {
-        autoAlpha: 1,
-        y: 0,
-        filter: 'blur(0px)',
-        duration: 1.35,
-        stagger: 0.08,
-        ease: 'power4.out',
-      }, 0)
-
-      if (imageWrapElement) {
-        revealTimeline.to(
-          imageWrapElement,
-          {
-            autoAlpha: 1,
-            y: 0,
-            scale: 1,
-            duration: 1.55,
-            ease: 'power4.out',
-          },
-          0.08
-        )
-
-        const floatTween = gsap.to(imageWrapElement, {
-          x: () => gsap.utils.random(-24, 24),
-          y: () => gsap.utils.random(-48, -18),
-          rotation: () => gsap.utils.random(-3.6, 3.6),
-          scale: () => gsap.utils.random(0.985, 1.06),
-          duration: () => gsap.utils.random(4.2, 7.4),
-          ease: 'sine.inOut',
-          repeat: -1,
-          yoyo: true,
-          repeatRefresh: true,
-          paused: true,
-        })
-
-        revealTimeline.call(() => {
-          floatTween.play()
-        }, [], '>-0.12')
-      }
-
-      if (imageWrapElement && imageCardElement) {
-        gsap.set(imageCardElement, {
-          transformPerspective: 1000,
-          transformOrigin: '50% 50%',
-          transformStyle: 'preserve-3d',
-        })
-
-        const xTo = gsap.quickTo(imageCardElement, 'x', { duration: 0.32, ease: 'power3.out' })
-        const yTo = gsap.quickTo(imageCardElement, 'y', { duration: 0.32, ease: 'power3.out' })
-        const rotateYTo = gsap.quickTo(imageCardElement, 'rotationY', { duration: 0.42, ease: 'power3.out' })
-        const rotateXTo = gsap.quickTo(imageCardElement, 'rotationX', { duration: 0.42, ease: 'power3.out' })
-
-        const handleMouseMove = (event) => {
-          const bounds = imageWrapElement.getBoundingClientRect()
-          const px = (event.clientX - bounds.left) / bounds.width - 0.5
-          const py = (event.clientY - bounds.top) / bounds.height - 0.5
-
-          xTo(px * 22)
-          yTo(py * 18)
-          rotateYTo(px * 13)
-          rotateXTo(py * -11)
-        }
-
-        const handleMouseEnter = () => {
-          gsap.to(imageCardElement, {
-            scale: 1.055,
-            duration: 0.28,
-            ease: 'power2.out',
-          })
-        }
-
-        const handleMouseLeave = () => {
-          xTo(0)
-          yTo(0)
-          rotateYTo(0)
-          rotateXTo(0)
-          gsap.to(imageCardElement, {
-            scale: 1,
-            duration: 0.45,
-            ease: 'power3.out',
-          })
-        }
-
-        imageWrapElement.addEventListener('mousemove', handleMouseMove)
-        imageWrapElement.addEventListener('mouseenter', handleMouseEnter)
-        imageWrapElement.addEventListener('mouseleave', handleMouseLeave)
-
-        removeMouseHandlers = () => {
-          imageWrapElement.removeEventListener('mousemove', handleMouseMove)
-          imageWrapElement.removeEventListener('mouseenter', handleMouseEnter)
-          imageWrapElement.removeEventListener('mouseleave', handleMouseLeave)
-        }
-      }
-    }, sectionElement)
-
-    return () => {
-      removeMouseHandlers()
-      context.revert()
+    {
+      title: "Growth Driven",
+      description: "Everything we build is engineered to increase your bottom line and expand your market share.",
+      icon: TrendingUp,
+      badgeColors: { base: "bg-orange-600", top: "bg-orange-400" },
+      innerBg: "bg-orange-50/70",
+      textColor: "text-gray-900",
+      iconColor: "text-orange-500",
+      transform: "rotate-[2deg] translate-y-[20px]"
     }
-  }, [])
+  ];
 
   return (
-    <section ref={sectionRef} className='w-full text-black'>
-      <div className='mx-auto w-full max-w-[1280px] px-4 pt-16 pb-24 sm:px-6 sm:pt-20 md:pt-28 lg:pt-36'>
-        <div className='mb-14 flex flex-col justify-between gap-8 lg:mb-20 lg:flex-row'>
-          <div className='mt-1 flex items-start gap-3 pt-2 lg:w-1/4'>
-            <div className='mt-1 h-2.5 w-2.5 shrink-0 rounded-full bg-[#22409a]'></div>
-            <h2 data-rise-text className='font-switzer text-[0.72rem] tracking-[0.18em] text-black/80 uppercase'>
-              WHY VRS
-            </h2>
-          </div>
+    <section className="relative min-h-screen  py-24 px-4  overflow-hidden z-0">
+      
+      {/* 1. Faint Horizontal Background Lines (Notebook effect) */}
 
-          <div className='space-y-1 lg:w-3/4'>
-            <h1 data-rise-text className='font-switzer text-[2.45rem] leading-[0.95] font-semibold tracking-tight text-[#0b1329] sm:text-[3.2rem] lg:text-[4.25rem]'>
-              Why Clients Choose VRS Over Other Fit-Out Companies
-            </h1>
-            <p data-rise-text className='font-switzer text-[1.05rem] leading-[1.35] tracking-tight md:text-[1.2rem] lg:max-w-[95%]'>
-              VRS combines in-house technical capability, controlled joinery execution, and structured project management.
-              This gives clients better visibility, stronger quality control, and lower execution risk from planning to handover.
-            </p>
-          </div>
-        </div>
 
-        <div className='grid grid-cols-1 gap-10 lg:grid-cols-[1.25fr_0.75fr] lg:gap-14 '>
-          <div className='rounded-lg border border-black/6 bg-white/95 p-6 shadow-[0_18px_45px_rgba(0,0,0,0.08)] md:p-10'>
-            <div className='mb-6 grid gap-3 rounded-lg border border-black/10 bg-[#f8f9fc] p-4 text-sm leading-relaxed text-black/70 md:grid-cols-2'>
-              <p data-rise-text>Typical Market Challenge: fragmented vendors and limited accountability.</p>
-              <p data-rise-text>VRS Approach: integrated design, joinery, and execution with one delivery structure.</p>
-            </div>
+      {/* Header Section */}
+      <div className="max-w-4xl mx-auto text-center mb-24 relative z-10">
+        <h2 className="text-5xl md:text-[3.5rem]  font-semibold text-slate-900 mb-6 tracking-tight">
+          Why <span className="italic text-[#F39838] ">Choose</span> VRS?
+        </h2>
+        <p className="text-xl text-gray-600/90 font-medium">
+          Here's why businesses choose us to handle their interior needs:
+        </p>
+      </div>
 
-            <div className='flex flex-col gap-9'>
-              {differentiators.map((section) => (
-                <div
-                  key={section.category}
-                  className='grid gap-5 border-b border-black/10 pb-7 last:border-none last:pb-0 md:grid-cols-[0.36fr_0.64fr] md:gap-8'
-                >
-                  <div>
-                    <span data-rise-text className='font-switzer text-[0.86rem] leading-[1.5] tracking-[0.08em] text-black/55 uppercase whitespace-pre-line'>
-                      {section.category}
-                    </span>
-                  </div>
+      {/* Grid Section containing the exact mapped lines */}
+      <div className="relative grid grid-cols-1 md:grid-cols-2 gap-x-12 gap-y-16 max-w-5xl mx-auto items-center justify-items-center z-10 pb-20">
+        
+        {/* 2. Strict Card-to-Card Dashed Connections */}
+        {/* Hidden on mobile to prevent layout breaking, visible on md+ screens */}
+        <svg className="absolute inset-0 w-full h-full hidden md:block -z-10 pointer-events-none opacity-60">
+          {/* Yellow to Purple (Row 1) */}
+          <line x1="25%" y1="16.6%" x2="75%" y2="16.6%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="8 8" />
+          {/* Yellow to Pink (Col 1, Row 1 to Row 2) */}
+          <line x1="25%" y1="16.6%" x2="25%" y2="50%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="8 8" />
+          {/* Pink to Blue (Row 2) */}
+          <line x1="25%" y1="50%" x2="75%" y2="50%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="8 8" />
+          {/* Pink to Emerald (Col 1, Row 2 to Row 3) */}
+          <line x1="25%" y1="50%" x2="25%" y2="83.3%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="8 8" />
+          {/* Emerald to Orange (Row 3) */}
+          <line x1="25%" y1="83.3%" x2="75%" y2="83.3%" stroke="#cbd5e1" strokeWidth="2" strokeDasharray="8 8" />
+        </svg>
 
-                  <div className='flex flex-col gap-3'>
-                    {section.items.map((item) => (
-                      <div
-                        key={item.id}
-                        data-rise-text
-                        className='font-switzer text-[1rem] leading-[1.35] tracking-tight text-black transition-all duration-500 hover:translate-x-2 hover:text-[#22409a] md:text-[1.08rem]'
-                      >
-                        ({item.id}) {item.name}
-                      </div>
-                    ))}
-                  </div>
-                </div>
-              ))}
-            </div>
-
-            <div className='mt-8 border-t border-black/10 pt-6 flex flex-wrap gap-3'>
-              <Link
-                to='/contact'
-                className='rounded-full bg-[#22409a] px-5 py-2.5 font-switzer text-[0.72rem] tracking-[0.14em] text-white uppercase transition duration-300 hover:translate-y-[-1px] hover:bg-[#1a3278]'
-              >
-                Request Site Visit
-              </Link>
-              <Link
-                to='/projects'
-                className='rounded-full border border-black/30 px-5 py-2.5 font-switzer text-[0.72rem] tracking-[0.14em] text-black uppercase transition duration-300 hover:bg-black/5'
-              >
-                View Delivered Projects
-              </Link>
-            </div>
-          </div>
-
-          <div ref={imageWrapRef} className='relative mx-auto w-full max-w-[350px] lg:mx-0 lg:ml-auto mt-30'>
-            <div ref={imageCardRef} className='relative will-change-transform'>
-              <div className='pointer-events-none absolute -inset-3 -z-10 rounded-lg bg-[#22409a]/16 rotate-[4deg]'></div>
-              <img
-                src='https://cityfurnish.com/blog/wp-content/uploads/2023/09/modren-room-home-interior-design-min.jpg'
-                alt='Interior design workspace'
-                className='h-[430px] w-full rounded-lg object-cover shadow-[0_24px_55px_rgba(0,0,0,0.18)]'
-              />
-              <div className='absolute right-4 bottom-4 rounded-lg bg-black/70 px-4 py-3 text-white backdrop-blur-sm'>
-                <p data-rise-text className='font-switzer text-[0.62rem] tracking-[0.16em] text-white/80 uppercase'>Verified Delivery Strength</p>
-                <p data-rise-text className='font-switzer text-[1.05rem] leading-tight font-semibold text-[#F39838]'>1000+ Projects | 9 Specialized Departments</p>
-              </div>
-            </div>
-          </div>
-        </div>
+        {/* Render Cards */}
+        {features.map((f, i) => (
+          <FeatureCard key={i} {...f} />
+        ))}
       </div>
     </section>
-  )
-}
+  );
+};
 
-export default ChooseUs
+export default SevenFigureAgencyClone;

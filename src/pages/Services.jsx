@@ -65,8 +65,9 @@ const processSteps = [
   { id: '01', title: 'Project Brief & Site Review', text: 'Scope capture, site conditions, and objective alignment.' },
   { id: '02', title: 'Design, Drawings & BOQ', text: 'Technical detailing, material selections, and commercial breakdown.' },
   { id: '03', title: 'Execution Planning', text: 'Program finalization, procurement alignment, and team mobilization.' },
-  { id: '04', title: 'On-Site Delivery', text: 'Coordinated execution with supervision, QA checks, and reporting.' },
-  { id: '05', title: 'Snagging & Handover', text: 'Final inspection, closeout actions, and formal handover.' },
+  { id: '04', title: 'Production in Factory', text: 'Coordinated execution with supervision, QA checks, and reporting.' },
+  { id: '05', title: 'On-Site Delivery & Installation', text: 'Coordinated execution with supervision, QA checks, and reporting.' },
+  { id: '06', title: 'Snagging & Handover', text: 'Final inspection, closeout actions, and formal handover.' },
 ];
 
 function Services() {
@@ -109,7 +110,6 @@ function Services() {
       <section className='mx-auto w-full max-w-[1280px]'>
         <div className='services-hero-line flex flex-col gap-4 border-b border-black/10 pb-8 sm:pb-10 lg:flex-row lg:items-end lg:justify-between'>
           <div>
-            <p className='text-[0.72rem] tracking-[0.16em] text-black/55 uppercase'>Service Route</p>
             <h1 className='mt-2 text-[3.2rem] leading-[0.92] font-semibold tracking-tight text-[#0b1329] sm:text-[4.2rem] lg:text-[5.4rem]'>
               VRS Technical Services
             </h1>

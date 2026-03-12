@@ -236,42 +236,25 @@ function AboutUs() {
 
 <section className='about5 about-reveal px-5 font-switzer'>
   <h2 className='mb-14 text-center text-6xl font-semibold leading-none md:text-7xl'>
-    Our Leadership
+  Message from director
   </h2>
 
-  <div className='about-stagger flex justify-between gap-6'>
-    <article className='about-stagger-item w-1/3'>
+  <div className='about-stagger flex justify-between gap-6 items-center'>
+    <article className='about-stagger-item w-2/3'>
       <img
         src='https://images.unsplash.com/photo-1568602471122-7832951cc4c5?auto=format&fit=crop&w=900&q=80'
         alt='General Manager'
         className='h-[380px] w-full rounded-3xl object-cover'
         loading='lazy'
       />
-      <h3 className='mt-5 text-4xl font-semibold leading-none md:text-3xl'>Vinay Kumar Matu Ram</h3>
-      <p className='mt-2 text-2xl text-black/85 md:text-lg'>Owner & General Manager</p>
+      <h3 className='mt-5 text-4xl font-semibold leading-none md:text-3xl'>Vinay Kumar</h3>
+      <p className='mt-2 text-2xl text-black/85 md:text-lg'>Owner &  Managing Director</p>
     </article>
 
-    <article className='about-stagger-item w-1/3'>
-      <img
-        src='https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=900&q=80'
-        alt='Project Manager'
-        className='h-[380px] w-full rounded-3xl object-cover'
-        loading='lazy'
-      />
-      <h3 className='mt-5 text-4xl font-semibold leading-none md:text-3xl'>Project Management</h3>
-      <p className='mt-2 text-2xl text-black/85 md:text-lg'>Site Engineering & Coordination</p>
-    </article>
+<article className='w-4/3 text-xl'>
+  Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis rerum sequi, eaque aspernatur esse unde eveniet aliquid sapiente debitis amet explicabo temporibus, dignissimos assumenda distinctio eligendi quia quidem facere autem earum placeat. Praesentium itaque dolorem sit, minima nisi placeat nemo atque nostrum a officia laudantium, cum modi earum quod error!
+</article>
 
-    <article className='about-stagger-item w-1/3'>
-      <img
-        src='https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?auto=format&fit=crop&w=900&q=80'
-        alt='Factory Manager'
-        className='h-[380px] w-full rounded-3xl object-cover'
-        loading='lazy'
-      />
-      <h3 className='mt-5 text-4xl font-semibold leading-none md:text-3xl'>Factory Management</h3>
-      <p className='mt-2 text-2xl text-black/85 md:text-lg'>Production & Joinery Operations</p>
-    </article>
   </div>
 </section>
 

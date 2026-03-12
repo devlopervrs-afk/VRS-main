@@ -2,7 +2,6 @@ import React, { useLayoutEffect, useRef } from 'react'
 import { gsap } from 'gsap'
 import { ScrollTrigger } from 'gsap/ScrollTrigger'
 import { Link } from 'react-router-dom'
-import { FaArrowRight, FaBars, FaXmark } from "react-icons/fa6";
 import { FiCheckCircle, FiClipboard, FiShield } from 'react-icons/fi'
 
 
@@ -222,7 +221,7 @@ function Home1() {
 
 <div className='mt-7 flex gap-15'> 
     
-    <div className='text-start text-white'>
+    <div className='text-start text-white block'>
 <div
   className='project-hover-card relative w-fit overflow-hidden rounded-lg'
   onMouseMove={handleProjectCardMove}
@@ -239,7 +238,7 @@ function Home1() {
 <p className='text-sm'>for a luxury home.</p>
     </div>
 
-    <div className='text-start text-white'>
+    <div className='text-start text-white block'>
 <div
   className='project-hover-card relative w-fit overflow-hidden rounded-lg'
   onMouseMove={handleProjectCardMove}
@@ -251,7 +250,7 @@ function Home1() {
   <p className=' text-[.8rem] leading-[1] font-semibold'>in 12 weeks</p>
 </div>
 </div>
-<h1 className='mt-3 text-3xl font-semibold'>Emirates Auction Customer Center</h1>
+<h1 className='mt-3 text-3xl font-semibold'>Emirates Auction Center, sell your car office</h1>
 <p className='text-md font-bold'>Branded Interior & Custom Joinery</p>
     </div>
 
@@ -260,7 +259,7 @@ function Home1() {
 
 <div className='mt-7 flex gap-15 pb-60'> 
 
-    <div className='text-start text-white'>
+    <div className='text-start text-white block'>
 <div
   className='project-hover-card relative w-fit overflow-hidden rounded-lg'
   onMouseMove={handleProjectCardMove}
@@ -276,7 +275,7 @@ function Home1() {
 <p className='text-md font-bold'>Architectural Detailing & Custom Joinery</p>
     </div>
 
-    <div className='text-start text-white'>
+    <div className='text-start text-white block'>
 <div
   className='project-hover-card relative w-fit overflow-hidden rounded-lg'
   onMouseMove={handleProjectCardMove}

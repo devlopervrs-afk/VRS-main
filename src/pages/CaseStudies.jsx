@@ -15,9 +15,8 @@ function CaseStudies() {
   return (
     <main className='px-5 pb-16 pt-14 font-switzer text-black'>
       <section className='mx-auto w-full max-w-[1280px] border-b border-black/10 pb-9'>
-        <p className='text-xs tracking-[0.16em] text-black/55 uppercase'>Proof Of Delivery</p>
         <h1 className='mt-2 text-[3.1rem] leading-[0.92] font-semibold tracking-tight text-[#0b1329] sm:text-[4.5rem]'>
-          Case Studies
+Case Studies & Success Stories
         </h1>
         <p className='mt-4 max-w-[760px] text-sm leading-relaxed text-black/70 sm:text-base'>
           Verified project stories showing challenge, execution model, and outcome across hospitality,
