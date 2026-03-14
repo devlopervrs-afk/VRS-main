@@ -251,7 +251,7 @@ function Home1() {
 </div>
 </div>
 <h1 className='mt-3 text-3xl font-semibold'>Emirates Auction Center, sell your car office</h1>
-<p className='text-md font-bold'>Branded Interior & Custom Joinery</p>
+<p className='text-md font-bold'>All Fit-out & Custom Joinery</p>
     </div>
 
 </div>
