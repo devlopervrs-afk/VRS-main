@@ -10,15 +10,14 @@ const images = {
 export const allProjects = [
   { id: 4, title: 'Nautica at BurJuman', sector: 'Retail', location: 'Dubai', client: 'Ceejay', scope: 'Full Joinery Works', image: images.retail, featured: true },
   { id: 1, title: 'G+1 Villa at Emirates Hills ', sector: 'Retail', location: 'Dubai', client: 'Owner', scope: 'Full Joinery Works', image: images.retail, featured: true },
-  { id: 2, title: 'G+1 Villa at Mirador la Coleccion, Arebian Renches', sector: 'Retail', location: 'Dubai', client: 'Owner', scope: 'Full Joinery Works', image: images.retail, featured: true },
-  { id: 3, title: 'Occ Room  at Al Warsen Dubai', sector: 'Retail', location: 'Dubai', client: 'Owner', scope: 'Full Joinery Works', image: images.retail, featured: true },
+  { id: 2, title: 'G+1 Villa at Mirador la Coleccion, Arebian Ranches', sector: 'Retail', location: 'Dubai', client: 'Owner', scope: 'Full Joinery Works', image: images.retail, featured: true },
+  { id: 3, title: 'OCC Room  at Al Warsan Dubai', sector: 'Retail', location: 'Dubai', client: 'Owner', scope: 'Full Joinery Works', image: images.retail, featured: true },
   { id: 5, title: 'Nautica at Dubai Outlet Mall', sector: 'Retail', location: 'Dubai', client: 'Ceejay', scope: 'Full Joinery Works', image: images.retail, featured: false },
   { id: 7, title: 'Prayer Rooms at Dubai Mall', sector: 'Commercial', location: 'Dubai Mall', client: 'Resolve(Emaar)', scope: 'Full Joinery Works', image: images.commercial, featured: true },
-  { id: 8, title: 'Gypsum Ceiling at Entertainment Area at Dubai Mall', sector: 'Commercial', location: 'Dubai Mall', client: 'Resolve(Emaar)', scope: 'Full Gypsum Works', image: images.commercial, featured: true },
+  { id: 8, title: 'Gypsum Ceiling at Entertainment Area, Dubai Mall', sector: 'Commercial', location: 'Dubai Mall', client: 'Resolve(Emaar)', scope: 'Full Gypsum Works', image: images.commercial, featured: true },
   { id: 9, title: 'G+M+4 Storey Comm. Bldg at Arjan Dubai', sector: 'Commercial', location: 'Dubai', client: 'Ashiyana contg', scope: 'Doors', image: images.commercial, featured: false },
   { id: 23, title: 'G+1+R Villa at Pearl Jumeirah, Dubai', sector: 'Residential', location: 'Dubai', client: 'Mirwais Alizai', scope: 'Full Joinery Works', image: images.residential, featured: false },
-  { id: 24, title: 'G+1+R Villa at Polo Homes, Arabian Renches', sector: 'Residential', location: 'Dubai', client: 'Mr. Atul Mittal', scope: 'Full Joinery Works', image: images.residential, featured: false },
-  { id: 27, title: 'G+1+R Villa at Polo Homes, Arabian Renches', sector: 'Residential', location: 'Dubai', client: 'Ravi Hinduja', scope: 'Full Joinery Works', image: images.residential, featured: false },
+  { id: 24, title: 'G+1+R Villa at Polo Homes, Arabian Ranches', sector: 'Residential', location: 'Dubai', client: 'Mr. Atul Mittal', scope: 'Full Joinery Works', image: images.residential, featured: false },
   ];
 
 export function getProjectSlug(project) {

@@ -250,7 +250,7 @@ function Home1() {
   <p className=' text-[.8rem] leading-[1] font-semibold'>in 12 weeks</p>
 </div>
 </div>
-<h1 className='mt-3 text-3xl font-semibold'>Emirates Auction Center, sell your car office</h1>
+<h1 className='mt-3 text-3xl font-semibold'>Sell your car, Emirates Auction, Ras Al Khor</h1>
 <p className='text-md font-bold'>All Fit-out & Custom Joinery</p>
     </div>
 

@@ -1,10 +1,10 @@
 const caseStudies = [
   {
     id: 1,
-    slug: 'baron-hotel-iraq',
-    title: 'Baron Hotel',
+    slug: 'villa-at-polo-homes',
+    title: 'G+1+R Villa at Polo Homes, Arabian Ranches',
     sector: 'Hospitality',
-    location: 'Iraq',
+    location: 'Arabian Ranches',
     client: 'Leopisc',
     projectValue: 'DHS 4,340,000',
     duration: '18 weeks',
@@ -63,8 +63,8 @@ const caseStudies = [
   },
   {
     id: 3,
-    slug: 'al-maskan-33-villas',
-    title: 'Al Maskan, 33 Villas',
+    slug: 'nautica-at-dubai-outlet-mall',
+    title: 'Nautica at Dubai Outlet Mall',
     sector: 'Residential',
     location: 'Dubai',
     client: 'Three Star Contg.',
@@ -94,10 +94,10 @@ const caseStudies = [
   },
   {
     id: 4,
-    slug: 'kempinski-djibouti',
-    title: 'Kempinski 5 Star Hotel',
+    slug: 'sell-your-car',
+    title: 'Sell your car, Emirates Auction, Ras Al Khor',
     sector: 'Hospitality',
-    location: 'Djibouti, East Africa',
+    location: 'Dubai',
     client: 'Nakheel / Taisei Corp.',
     projectValue: 'DHS 3,212,755',
     duration: '20 weeks',
